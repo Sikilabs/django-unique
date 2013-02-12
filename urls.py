@@ -1,9 +1,5 @@
-"""
-    unique:urls
-
-    @author: ibrahim (at) zinaria (dot) com
-    @license: MIT
-"""
+__author__ = 'ibrahim (at) zinaria (dot) com'
+__licence__ = 'MIT'
 
 from django.conf.urls.defaults import patterns, url
 
