@@ -1,9 +1,5 @@
-"""
-    unique: views
-
-    @author: ibrahim (at) zinaria (dot) com
-    @license: MIT
-"""
+__author__ = 'ibrahim (at) zinaria (dot) com'
+__licence__ = 'MIT'
 
 from django.shortcuts import RequestContext
 from django.template import loader
@@ -23,7 +19,8 @@ class_to_import = getattr(module_to_import_from, _class)
 
 
 def get_file(request, unique_url):
-    """get file or redirect to error page
+    """
+    get file or redirect to error page
     """
 
     my_unique = UniqueUrl.objects.get(url=unique_url)
@@ -51,7 +48,8 @@ def get_file(request, unique_url):
 
 
 def generate_url(request, object_id):
-    """generate unique url from object id
+    """
+    generate unique url from object id
     """
 
     unique_object = class_to_import.objects.get(id=object_id)
