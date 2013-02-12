@@ -1,9 +1,5 @@
-"""
-    unique:models
-
-    @author: ibrahim (at) zinaria (dot) com
-    @license: MIT
-"""
+__author__ = 'ibrahim (at) zinaria (dot) com'
+__licence__ = 'MIT'
 
 from django.db import models
 from django.contrib.auth.models import User
@@ -23,8 +19,8 @@ class_to_import = getattr(module_to_import_from, _class)
 
 class UniqueUrl(models.Model):
     """
-        class to describe a temporary unique download url per user
-        please use the set_url function to create an instance
+    class to describe a temporary unique download url per user
+    please use the set_url function to create an instance
     """
 
     url = models.CharField(max_length=1000)
@@ -36,9 +32,9 @@ class UniqueUrl(models.Model):
 
     def encode_url(self):
         """
-            Turn `data` into a hash and an encoded string, suitable for use
-            with `decode_data`.
-            data = [user, exp_date, ref_obj, file_name]
+        Turn `data` into a hash and an encoded string, suitable for use
+        with `decode_data`.
+        data = [user, exp_date, ref_obj, file_name]
         """
 
         data = [str(self.user.username),
@@ -55,7 +51,7 @@ class UniqueUrl(models.Model):
 
     def decode_url(self, my_hash, url):
         """
-            The inverse of 'encode_url'
+        The inverse of 'encode_url'
         """
 
         my_url = urllib.unquote(url)
