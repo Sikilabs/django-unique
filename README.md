@@ -4,7 +4,7 @@ django-unique
 generate unique urls associated to a user each unique url is linked to an object and a user. 
 The url usage can be tracked by clicks number. Each url has an expiration date.
 
-Thanks to Net Batchelder : http://stackoverflow.com/a/1360222
+Thanks to Ned Batchelder : http://stackoverflow.com/a/1360222
 
 This become very handy when your models are actual files and you want to make them available for download
 with a minimal level of security.
